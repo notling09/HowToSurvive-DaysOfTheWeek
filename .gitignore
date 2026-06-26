@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Database (wird beim ersten Start neu erzeugt)
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Environment / secrets
+.env
+.env.*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor / tooling
+.claude/
+.vscode/

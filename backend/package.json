@@ -1,0 +1,17 @@
+{
+  "name": "how-to-survive-backend",
+  "version": "1.0.0",
+  "description": "REST-API für How to Survive - Days of the Week Edition (Modul 294)",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
