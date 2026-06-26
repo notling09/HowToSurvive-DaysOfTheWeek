@@ -101,6 +101,20 @@ Auf der Startseite hat **nur die heutige Karte** (mit „Today"-Markierung) eine
 - **Like/Unlike:** Ein erneuter Klick auf das Herz nimmt den Like wieder zurück (1 Like pro Nutzer pro Tipp).
 - Beim **Erstellen** eines Tipps ist die Stimmung (Mood) ein **Pflichtfeld**.
 
+## Deployment (ein Service)
+
+In Produktion liefert der Express-Server zusätzlich das gebaute React-Frontend aus
+(`backend/src/index.js`), sodass Frontend + Backend **eine** URL teilen. Beispiel mit
+[Render](https://render.com) → **New Web Service** (Repo verbinden):
+
+- **Build Command:** `cd frontend && npm install && npm run build && cd ../backend && npm install`
+- **Start Command:** `cd backend && npm start`
+- **Environment Variable:** `JWT_SECRET` = (langer Zufallswert) für die Login-Sicherheit.
+
+Hinweis: Auf kostenlosen Tarifen ist der Speicher flüchtig – die SQLite-Datenbank wird
+bei Neustarts auf die Seed-Daten zurückgesetzt (für eine Demo ausreichend). Für dauerhafte
+Daten bräuchte es eine persistente Disk oder eine Online-DB (z. B. PostgreSQL).
+
 ## Credits
 
 - Animierte Wochentag-Icons: [Meteocons](https://github.com/basmilius/meteocons) von Bas Milius (MIT-Lizenz), eingebunden als Lottie-Animationen (`@meteocons/lottie`).
